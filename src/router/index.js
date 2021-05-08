@@ -8,6 +8,12 @@ const About = { template: '<div>About</div>' }
 const routes = [
     { path: '/', component: Home },
     { path: '/about', component: About },
+    {
+        path: "/login",
+        name: "Login",
+        meta: { title: '登录' },
+        component: () => import("../views/Login.vue")
+    }
 ]
 
 const router = createRouter({
