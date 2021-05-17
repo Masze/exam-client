@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { getData } from "@api/index";
 export default {
   data() {
     return {};
@@ -13,6 +14,8 @@ export default {
     this.$store.state.activeIndex = "/exam";
   },
   methods: {},
-  mounted() {},
+  mounted() {
+
+  },
 };
 </script>

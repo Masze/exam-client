@@ -10,7 +10,10 @@
         "paths": {
             "@component": [
                 "./src/component"
-            ]
+            ],
+            "@api": [
+                "./src/api"
+            ],
         }
     }
 }

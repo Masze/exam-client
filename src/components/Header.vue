@@ -3,7 +3,7 @@
     <el-row>
       <el-col :span="4" style="text-align: center; line-height: 60px">
         <h1>
-          <a href="#/zh-CN" class="">
+          <a href="/" class="">
             <img src="../assets/img/logo.jpg" alt="logo" class="logo" />
           </a>
         </h1>
