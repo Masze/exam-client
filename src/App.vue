@@ -1,9 +1,16 @@
 <template>
+  <Header />
   <router-view></router-view>
 </template>
 
 <script>
-export default {};
+import Header from "./components/Header.vue";
+
+export default {
+  components: {
+    Header,
+  },
+};
 </script>
 
 <style>

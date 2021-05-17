@@ -1,17 +1,22 @@
 <template>
-  <Header/>
-  <div>Home</div>
+  <el-row>
+  <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple">A</div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple">B</div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple">C</div></el-col>
+  <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
+</el-row>
 </template>
 
 <script>
-import Header from "../components/Header.vue";
+ 
 
 export default {
   data() {
     return {};
   },
   components: {
-    Header,
+ 
   },
   computed: {},
   methods: {},

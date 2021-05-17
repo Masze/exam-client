@@ -1,9 +1,17 @@
 <template>
   <div class="header">
     <el-row>
-      <el-col :span="4" style="text-align: center; line-height: 60px"
-        >考试</el-col
-      >
+      <el-col :span="4" style="text-align: center; line-height: 60px">
+        <h1>
+          <a href="#/zh-CN" class="">
+            <img 
+              src="../assets/img/logo.jpg"
+              alt="logo"
+              class="logo"
+            />
+          </a>
+        </h1>
+      </el-col>
       <el-col :span="16">
         <el-menu
           :default-active="activeIndex"
@@ -14,8 +22,9 @@
           @select="handleSelect"
         >
           <el-menu-item index="/">首页</el-menu-item>
-          <el-menu-item index="/login">登录</el-menu-item>
-          <el-menu-item index="3">消息中心</el-menu-item>
+          <el-menu-item index="/exam">考试</el-menu-item>
+          <el-menu-item index="/wrongQuestion">错题</el-menu-item>
+          <el-menu-item index="/questionBank">题库</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="4">
@@ -116,6 +125,10 @@ export default {
   border-bottom: none;
 }
 .el-menu-item {
+  border-bottom: none !important;
   font-size: 22px !important;
+}
+.logo{
+  height: 60px;
 }
 </style>
