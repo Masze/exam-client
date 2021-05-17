@@ -3,16 +3,15 @@
 </template>
 
 <script>
- 
-
 export default {
   data() {
     return {};
   },
-  components: {
- 
-  },
+  components: {},
   computed: {},
+  created() {
+    this.$store.state.activeIndex = "/exam";
+  },
   methods: {},
   mounted() {},
 };
