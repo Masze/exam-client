@@ -3,14 +3,13 @@
 </template>
 
 <script>
- 
-
 export default {
   data() {
     return {};
   },
-  components: {
- 
+  components: {},
+  created() {
+    this.$store.state.activeIndex = "/wrongQuestion";
   },
   computed: {},
   methods: {},

@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Header :activeIndex="activeIndex" />
   <router-view></router-view>
 </template>
 
@@ -9,6 +9,11 @@ import Header from "./components/Header.vue";
 export default {
   components: {
     Header,
+  },
+  computed: {
+    activeIndex() {
+      return this.$store.state.activeIndex ?  this.$store.state.activeIndex : "/" ;
+    },
   },
 };
 </script>

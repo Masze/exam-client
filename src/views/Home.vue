@@ -1,25 +1,49 @@
 <template>
-  <el-row>
-  <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple">A</div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple">B</div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple">C</div></el-col>
-  <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
+  <div>
+    <el-row>
+      <el-col :span="3"></el-col>
+      <el-col :span="6"
+        ><div class="fc_button" @click="handleClick('/exam')">
+          参加考试
+        </div></el-col
+      >
+      <el-col :span="6"
+        ><div class="fc_button" @click="handleClick('/wrongQuestion')">
+          我的错题
+        </div></el-col
+      >
+      <el-col :span="6"
+        ><div class="fc_button" @click="handleClick('/questionBank')">
+          备考题库
+        </div></el-col
+      >
+      <el-col :span="3"></el-col>
+    </el-row>
+  </div>
 </template>
 
 <script>
- 
-
 export default {
   data() {
     return {};
   },
-  components: {
- 
-  },
+  components: {},
   computed: {},
-  methods: {},
+  methods: {
+    handleClick(path) {
+      this.$store.state.activeIndex = path;
+      this.$router.push(path);
+    },
+  },
   mounted() {},
 };
 </script>
+<style>
+.fc_button {
+  box-shadow: inset 0 0 0 3000px rgb(255 255 255 / 30%);
+  margin: 50px 15px 15px 15px;
+  background-color: #409eff87;
+  height: 350px;
+  font-size: 20px;
+}
+</style>

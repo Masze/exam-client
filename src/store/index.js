@@ -4,6 +4,7 @@ export default createStore({
     // 需要存储的值都放在这里面
     state() {
         return {
+            activeIndex: "/",
             count: 0,	// 在视图中通过$store.state.count来获取
         };
     },

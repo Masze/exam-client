@@ -4,11 +4,7 @@
       <el-col :span="4" style="text-align: center; line-height: 60px">
         <h1>
           <a href="#/zh-CN" class="">
-            <img 
-              src="../assets/img/logo.jpg"
-              alt="logo"
-              class="logo"
-            />
+            <img src="../assets/img/logo.jpg" alt="logo" class="logo" />
           </a>
         </h1>
       </el-col>
@@ -19,7 +15,6 @@
           class="el-menu-demo"
           mode="horizontal"
           router="true"
-          @select="handleSelect"
         >
           <el-menu-item index="/">首页</el-menu-item>
           <el-menu-item index="/exam">考试</el-menu-item>
@@ -62,16 +57,11 @@
 </template>
 <script>
 export default {
-  data() {
-    return {};
-  },
+  props: ['activeIndex'],
   computed: {
     username() {
       let username = sessionStorage.getItem("userName");
       return username ? username : this.name;
-    },
-    activeIndex() {
-      return "/";
     },
   },
   methods: {
@@ -128,7 +118,7 @@ export default {
   border-bottom: none !important;
   font-size: 22px !important;
 }
-.logo{
+.logo {
   height: 60px;
 }
 </style>
