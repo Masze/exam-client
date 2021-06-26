@@ -1,5 +1,5 @@
 export default {
     baseUrl: {
-        dev: "http://www.baidu.com/",
+        dev: "http://121.5.196.41:8080/",
     }
 }

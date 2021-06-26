@@ -1,4 +1,5 @@
 <template>
+<Header :activeIndex="activeIndex" />
   <div>
     <el-row>
       <el-col :span="3"></el-col>
@@ -23,11 +24,13 @@
 </template>
 
 <script>
+import Header from "@components/Header.vue";
+
 export default {
   data() {
     return {};
   },
-  components: {},
+  components: {Header},
   computed: {},
   methods: {
     handleClick(path) {
